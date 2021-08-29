@@ -15,11 +15,11 @@ class Section {
     
     var sectionHeader: String
     var dateOfSection: Date
-    var timeRange: String
+    var timeRange: NSMutableAttributedString
     var totalEstimatedEarnings: String
     var sectionRides: [Ride]
     
-    init(sectionHeader: String, dateOfSection: Date, timeRange: String, totalEstimatedEarnings: String, sectionRides: [Ride]) {
+    init(sectionHeader: String, dateOfSection: Date, timeRange: NSMutableAttributedString, totalEstimatedEarnings: String, sectionRides: [Ride]) {
         self.sectionHeader = sectionHeader
         self.dateOfSection = dateOfSection
         self.timeRange = timeRange

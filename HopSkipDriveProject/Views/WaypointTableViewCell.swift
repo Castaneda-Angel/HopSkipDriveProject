@@ -31,7 +31,7 @@ class WaypointTableViewCell: UITableViewCell {
     lazy var addressLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        
+        label.textColor = .gray
         return label
     }()
     

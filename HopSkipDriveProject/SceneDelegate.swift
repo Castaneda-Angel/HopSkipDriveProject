@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         navigationController.navigationBar.isTranslucent = false
         
         //Appearance for the nav bar throughout the app.
-        UINavigationBar.appearance().barTintColor = UIColor.init(red: 0.1, green: 0.26, blue: 0.43, alpha: 1.0)
+        UINavigationBar.appearance().barTintColor = getMainColor()
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         UINavigationBar.appearance().tintColor = .white
 

@@ -35,6 +35,8 @@ class RideDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         //Waypoints TableView setup
         rideDetailsView.waypointsTableView.delegate = self
         rideDetailsView.waypointsTableView.dataSource  = self
+        rideDetailsView.waypointsTableView.separatorColor = .gray
+        rideDetailsView.waypointsTableView.separatorStyle = .singleLine
         rideDetailsView.waypointsTableView.register(WaypointTableViewCell.self, forCellReuseIdentifier: "waypointCell")
         rideDetailsView.waypointsTableView.tableFooterView = tableFooterView
         
@@ -48,21 +50,26 @@ class RideDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     func populateViews() {
         
         //constructs the date/time ranges for the header
-        var timeRange = ""
+        var timeRange = NSMutableAttributedString()
         var dateForHeader = ""
         if let startDate = stringToDate(dateString: ride!.starts_at), let endDate = stringToDate(dateString: ride!.ends_at) {
             
-            timeRange = constructTimeRangeString(from: startDate, to: endDate)
+            timeRange = constructTimeRangeString(from: startDate, to: endDate, isSmallText: false, isForHeader: true)
             dateForHeader = dateToString(date: startDate, format: "E M/d")
         }
         
-        rideDetailsView.informationHeaderView.dateLabel.text = dateForHeader
-        rideDetailsView.informationHeaderView.timeRangeLabel.text = timeRange
+        let dateHeaderAttrs = [NSAttributedString.Key.foregroundColor: getMainColor(), NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 19)]
+        let dateHeaderAttributedString = NSMutableAttributedString(string: dateForHeader, attributes: dateHeaderAttrs)
+        
+        rideDetailsView.informationHeaderView.dateLabel.attributedText = dateHeaderAttributedString
+        rideDetailsView.informationHeaderView.timeRangeLabel.attributedText = timeRange
+        
+        
         
         //gets dollar amount from cents
         let estimatedDollars = centsToDollars(cents: ride!.estimated_earnings_cents)
         
-        rideDetailsView.informationHeaderView.estimatedTotalLabel.text = formatDollars(dollars: estimatedDollars)
+        rideDetailsView.informationHeaderView.estimatedAmountLabel.text = formatDollars(dollars: estimatedDollars)
         
         //shows the series text if it's actually a series
         if(ride!.in_series == true){

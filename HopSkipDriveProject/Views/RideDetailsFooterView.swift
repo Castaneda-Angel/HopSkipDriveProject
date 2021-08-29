@@ -18,6 +18,7 @@ class RideDetailsFooterView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         
+        label.textColor = .gray
         label.font = UIFont.systemFont(ofSize: 14)
         
         return label
@@ -28,7 +29,7 @@ class RideDetailsFooterView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         
         button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.black.withAlphaComponent(0.5).cgColor
+        button.layer.borderColor = UIColor.gray.cgColor
         
         button.setTitle("Cancel This Trip", for: .normal)
         button.setTitleColor(.red, for: .normal)

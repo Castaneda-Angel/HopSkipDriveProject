@@ -18,7 +18,7 @@ class RidesSectionHeaderView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         
-        
+        label.sizeToFit()
         return label
     }()
     
@@ -30,11 +30,23 @@ class RidesSectionHeaderView: UIView {
         return label
     }()
     
-    lazy var estimatedTotalLabel: UILabel = {
+    lazy var estimatedTextLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         
         label.textAlignment = .right
+        label.text = "ESTIMATED"
+        label.textColor = UIColor.gray
+        
+        return label
+    }()
+    
+    lazy var estimatedAmountLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        label.textAlignment = .right
+        label.textColor = getMainColor()
         
         return label
     }()
@@ -42,13 +54,13 @@ class RidesSectionHeaderView: UIView {
     func addViews() {
         addSubview(dateLabel)
         addSubview(timeRangeLabel)
-        addSubview(estimatedTotalLabel)
+        addSubview(estimatedTextLabel)
+        addSubview(estimatedAmountLabel)
     }
     
     func addConstraints() {
         dateLabel.snp_makeConstraints({ (make) -> Void in
             make.height.equalTo(50)
-            make.width.equalTo(75)
             
             make.top.bottom.equalToSuperview()
             make.left.equalToSuperview().offset(10)
@@ -60,12 +72,18 @@ class RidesSectionHeaderView: UIView {
             make.left.equalTo(dateLabel.snp_right)
             make.top.bottom.equalToSuperview()
         })
-        estimatedTotalLabel.snp_makeConstraints({ (make) -> Void in
-            make.height.equalTo(50)
+        
+        estimatedTextLabel.snp_makeConstraints({ (make) -> Void in
+            make.right.equalToSuperview().offset(-10)
+            make.top.equalToSuperview().offset(10)
+        })
+        
+        estimatedAmountLabel.snp_makeConstraints({ (make) -> Void in
             make.width.equalTo(100)
 
             make.right.equalToSuperview().offset(-10)
-            make.top.bottom.equalToSuperview()
+            make.top.equalTo(estimatedTextLabel.snp_bottom)
+            make.bottom.equalToSuperview()
         })
     }
     

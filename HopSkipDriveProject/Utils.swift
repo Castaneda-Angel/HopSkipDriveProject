@@ -10,6 +10,7 @@
 */
 
 import Foundation
+import UIKit
 
 /*
  From string to date
@@ -51,15 +52,28 @@ func timeToInt(date: Date) -> Int {
  Takes start and end dates and turns their times into a range.
  -Also gets rid of "AM/PM" and simplifies them to "a/p"
 */
-func constructTimeRangeString(from startDate: Date, to endDate: Date) -> String {
-    let formattedStartTime = dateToString(date: startDate, format: "h:mm a")
-    let formattedEndTime = dateToString(date: endDate, format: "h:mm a")
+func constructTimeRangeString(from startDate: Date, to endDate: Date, isSmallText: Bool, isForHeader: Bool) -> NSMutableAttributedString {
+    var formattedStartTime = dateToString(date: startDate, format: "h:mm a")
+    var formattedEndTime = dateToString(date: endDate, format: "h:mm a")
     
-    var timeRange = "\(formattedStartTime) - \(formattedEndTime)"
-    timeRange = timeRange.replacingOccurrences(of: " AM", with: "a")
-    timeRange = timeRange.replacingOccurrences(of: " PM", with: "p")
+    formattedStartTime = formattedStartTime.replacingOccurrences(of: " AM", with: "a")
+    formattedStartTime = formattedStartTime.replacingOccurrences(of: " PM", with: "p")
+    formattedEndTime = formattedEndTime.replacingOccurrences(of: " AM", with: "a")
+    formattedEndTime = formattedEndTime.replacingOccurrences(of: " PM", with: "p")
     
-    return timeRange
+    let startTimeAttrs = [NSAttributedString.Key.font : isSmallText == true ? UIFont.boldSystemFont(ofSize: 13) : UIFont.boldSystemFont(ofSize: 16)]
+    
+    let fullTimeRangeText = NSMutableAttributedString(string: "\(isForHeader == true ? " • " : "")\(formattedStartTime)", attributes: startTimeAttrs)
+    
+    let endTimeAttrs = [NSAttributedString.Key.font : isSmallText == true ? UIFont.systemFont(ofSize: 13) : UIFont.systemFont(ofSize: 16)]
+    
+    let endTimeAttrString = NSMutableAttributedString(string: " - \(formattedEndTime)", attributes: endTimeAttrs)
+    
+    fullTimeRangeText.append(endTimeAttrString)
+    
+    
+    
+    return fullTimeRangeText
 }
 
 /*
@@ -123,4 +137,11 @@ func constructWaypointsText(waypoints: [Waypoint]) -> String {
     }
     
     return allWaypointsInRide
+}
+
+/*
+ Returns the main color of the app
+*/
+func getMainColor() -> UIColor {
+    return UIColor.init(red: 0.1, green: 0.26, blue: 0.43, alpha: 1.0)
 }

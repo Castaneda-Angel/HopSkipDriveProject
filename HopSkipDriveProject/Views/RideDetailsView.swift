@@ -31,7 +31,7 @@ class RideDetailsView: UIView {
     lazy var isSeriesLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        
+        label.textColor = .gray
         label.font = UIFont.italicSystemFont(ofSize: 13)
         return label
     }()
@@ -55,7 +55,7 @@ class RideDetailsView: UIView {
         informationHeaderView.snp_makeConstraints({ (make) -> Void in
             make.top.left.right.equalToSuperview()
             make.width.equalToSuperview()
-            make.height.equalTo(50)
+            make.height.equalTo(60)
         })
         startAndEndMapView.snp_makeConstraints({ (make) -> Void in
             make.top.equalTo(informationHeaderView.snp.bottom)

@@ -94,9 +94,9 @@ class MyRidesViewController: UIViewController, UITableViewDelegate, UITableViewD
                 totalEarningsInSection += sectionRide.estimated_earnings_cents
             }
             
-            var rangeForSection = ""
+            var rangeForSection = NSMutableAttributedString()
             if let earliestTime = earliestTime, let latestTime = latestTime {
-                rangeForSection = constructTimeRangeString(from: earliestTime, to: latestTime)
+                rangeForSection = constructTimeRangeString(from: earliestTime, to: latestTime, isSmallText: true, isForHeader: true)
             }
             
             //Turning estimated total earnings from cents to dollars
@@ -130,11 +130,11 @@ class MyRidesViewController: UIViewController, UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "rideCell", for: indexPath) as! RideTableViewCell
         
         //construcs time range string for every ride
-        var timeRangeForRide = ""
+        var timeRangeForRide = NSMutableAttributedString()
         if let startDate = stringToDate(dateString: sectionsData[indexPath.section].sectionRides[indexPath.row].starts_at), let endDate = stringToDate(dateString: sectionsData[indexPath.section].sectionRides[indexPath.row].ends_at) {
-            timeRangeForRide = constructTimeRangeString(from: startDate, to: endDate)
+            timeRangeForRide = constructTimeRangeString(from: startDate, to: endDate, isSmallText: false, isForHeader: false)
         }
-        cell.timeRangeLabel.text = timeRangeForRide
+        cell.timeRangeLabel.attributedText = timeRangeForRide
         
         
         //gets rider and booster seat counts
@@ -153,7 +153,17 @@ class MyRidesViewController: UIViewController, UITableViewDelegate, UITableViewD
         var estimatedDollars = centsToDollars(cents: sectionsData[indexPath.section].sectionRides[indexPath.row].estimated_earnings_cents)
         estimatedDollars = formatDollars(dollars: estimatedDollars)
         
-        cell.estimatedEarningsLabel.text = "est. \(estimatedDollars)"
+        //Set attributes to the different parts of the full earnings text
+        let smallerText = "est."
+        let smallerTextAttrs = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15), NSAttributedString.Key.foregroundColor : getMainColor()]
+        let fullEarningsText = NSMutableAttributedString(string: smallerText, attributes: smallerTextAttrs)
+        
+        let dollarsText = " \(estimatedDollars)"
+        let dollarsTextAttrs = [NSAttributedString.Key.foregroundColor : getMainColor(), NSAttributedString.Key.font : UIFont.systemFont(ofSize: 18, weight: .medium)]
+        let dollarsTextAttributedString = NSMutableAttributedString(string: dollarsText, attributes: dollarsTextAttrs)
+        
+        fullEarningsText.append(dollarsTextAttributedString)
+        cell.estimatedEarningsLabel.attributedText = fullEarningsText
         
         //constructs addresses in a numbered format
         cell.waypointsLabel.text = constructWaypointsText(waypoints: sectionsData[indexPath.section].sectionRides[indexPath.row].ordered_waypoints)
@@ -177,15 +187,24 @@ class MyRidesViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = RidesSectionHeaderView(frame: .zero)
         
-        headerView.dateLabel.text = sectionsData[section].sectionHeader
-        headerView.timeRangeLabel.text = sectionsData[section].timeRange
-        headerView.estimatedTotalLabel.text = sectionsData[section].totalEstimatedEarnings
+        //sets attributes for the date
+        let dateHeaderAttrs = [NSAttributedString.Key.foregroundColor: getMainColor(), NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)]
+        let dateHeaderAttributedString = NSMutableAttributedString(string: sectionsData[section].sectionHeader, attributes: dateHeaderAttrs)
+        
+        headerView.dateLabel.attributedText = dateHeaderAttributedString
+        headerView.timeRangeLabel.attributedText = sectionsData[section].timeRange
+        
+        //sets font size of the "estimated" text to be smaller than Ride Detail header view
+        headerView.estimatedTextLabel.font = UIFont.systemFont(ofSize: 13)
+        
+        headerView.estimatedAmountLabel.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        headerView.estimatedAmountLabel.text = sectionsData[section].totalEstimatedEarnings
         
         return headerView
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
+        return 60
     }
     
 }
