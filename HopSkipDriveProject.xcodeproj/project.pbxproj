@@ -1,0 +1,736 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B3000BB26D8651C00ECBD3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3000BA26D8651C00ECBD3D /* AppDelegate.swift */; };
+		0B3000BD26D8651C00ECBD3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3000BC26D8651C00ECBD3D /* SceneDelegate.swift */; };
+		0B3000C426D8651D00ECBD3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B3000C326D8651D00ECBD3D /* Assets.xcassets */; };
+		0B3000C726D8651D00ECBD3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3000C526D8651D00ECBD3D /* LaunchScreen.storyboard */; };
+		0B3000D226D8651D00ECBD3D /* HopSkipDriveProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3000D126D8651D00ECBD3D /* HopSkipDriveProjectTests.swift */; };
+		0B3000DD26D8651E00ECBD3D /* HopSkipDriveProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3000DC26D8651E00ECBD3D /* HopSkipDriveProjectUITests.swift */; };
+		0B3000EB26D8685C00ECBD3D /* MyRidesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3000EA26D8685C00ECBD3D /* MyRidesViewController.swift */; };
+		0B3000EE26D868A100ECBD3D /* NetworkCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3000ED26D868A100ECBD3D /* NetworkCalls.swift */; };
+		0B3000F026D8690200ECBD3D /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3000EF26D8690200ECBD3D /* Ride.swift */; };
+		0B3000F226D86AFB00ECBD3D /* Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3000F126D86AFB00ECBD3D /* Waypoint.swift */; };
+		0B3000F426D86B4900ECBD3D /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3000F326D86B4900ECBD3D /* Passenger.swift */; };
+		0B3000F626D86BA800ECBD3D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3000F526D86BA800ECBD3D /* Location.swift */; };
+		0B3000FB26D876B800ECBD3D /* MyRidesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3000FA26D876B800ECBD3D /* MyRidesView.swift */; };
+		0B30010026D8935600ECBD3D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3000FF26D8935600ECBD3D /* Utils.swift */; };
+		0B30010226D9ED4700ECBD3D /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30010126D9ED4700ECBD3D /* Section.swift */; };
+		0B30010426DABAF000ECBD3D /* RidesSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30010326DABAF000ECBD3D /* RidesSectionHeaderView.swift */; };
+		0B30010626DAE08000ECBD3D /* RideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30010526DAE08000ECBD3D /* RideTableViewCell.swift */; };
+		0B30010A26DB292700ECBD3D /* RideDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30010926DB292700ECBD3D /* RideDetailsViewController.swift */; };
+		0B30010E26DB37FE00ECBD3D /* RideDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30010D26DB37FE00ECBD3D /* RideDetailsView.swift */; };
+		0B30011026DB556D00ECBD3D /* WaypointTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30010F26DB556D00ECBD3D /* WaypointTableViewCell.swift */; };
+		0B30011226DB5C9B00ECBD3D /* RideDetailsFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30011126DB5C9B00ECBD3D /* RideDetailsFooterView.swift */; };
+		ECABCB0BE2C8BE131C2217FD /* Pods_HopSkipDriveProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A431C00A84088918CE9D464 /* Pods_HopSkipDriveProject.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0B3000CE26D8651D00ECBD3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B3000AF26D8651C00ECBD3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B3000B626D8651C00ECBD3D;
+			remoteInfo = HopSkipDriveProject;
+		};
+		0B3000D926D8651E00ECBD3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B3000AF26D8651C00ECBD3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B3000B626D8651C00ECBD3D;
+			remoteInfo = HopSkipDriveProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B3000B726D8651C00ECBD3D /* HopSkipDriveProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HopSkipDriveProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B3000BA26D8651C00ECBD3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0B3000BC26D8651C00ECBD3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0B3000C326D8651D00ECBD3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0B3000C626D8651D00ECBD3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0B3000C826D8651D00ECBD3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B3000CD26D8651D00ECBD3D /* HopSkipDriveProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HopSkipDriveProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B3000D126D8651D00ECBD3D /* HopSkipDriveProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopSkipDriveProjectTests.swift; sourceTree = "<group>"; };
+		0B3000D326D8651D00ECBD3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B3000D826D8651E00ECBD3D /* HopSkipDriveProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HopSkipDriveProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B3000DC26D8651E00ECBD3D /* HopSkipDriveProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HopSkipDriveProjectUITests.swift; sourceTree = "<group>"; };
+		0B3000DE26D8651E00ECBD3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B3000EA26D8685C00ECBD3D /* MyRidesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRidesViewController.swift; sourceTree = "<group>"; };
+		0B3000ED26D868A100ECBD3D /* NetworkCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCalls.swift; sourceTree = "<group>"; };
+		0B3000EF26D8690200ECBD3D /* Ride.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
+		0B3000F126D86AFB00ECBD3D /* Waypoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waypoint.swift; sourceTree = "<group>"; };
+		0B3000F326D86B4900ECBD3D /* Passenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passenger.swift; sourceTree = "<group>"; };
+		0B3000F526D86BA800ECBD3D /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		0B3000FA26D876B800ECBD3D /* MyRidesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRidesView.swift; sourceTree = "<group>"; };
+		0B3000FF26D8935600ECBD3D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		0B30010126D9ED4700ECBD3D /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		0B30010326DABAF000ECBD3D /* RidesSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RidesSectionHeaderView.swift; sourceTree = "<group>"; };
+		0B30010526DAE08000ECBD3D /* RideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideTableViewCell.swift; sourceTree = "<group>"; };
+		0B30010926DB292700ECBD3D /* RideDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailsViewController.swift; sourceTree = "<group>"; };
+		0B30010D26DB37FE00ECBD3D /* RideDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailsView.swift; sourceTree = "<group>"; };
+		0B30010F26DB556D00ECBD3D /* WaypointTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointTableViewCell.swift; sourceTree = "<group>"; };
+		0B30011126DB5C9B00ECBD3D /* RideDetailsFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailsFooterView.swift; sourceTree = "<group>"; };
+		54CED23A79A906453A563B6F /* Pods-HopSkipDriveProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HopSkipDriveProject.debug.xcconfig"; path = "Target Support Files/Pods-HopSkipDriveProject/Pods-HopSkipDriveProject.debug.xcconfig"; sourceTree = "<group>"; };
+		6A431C00A84088918CE9D464 /* Pods_HopSkipDriveProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HopSkipDriveProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFFF07E3C2D6E6D7F19BE65B /* Pods-HopSkipDriveProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HopSkipDriveProject.release.xcconfig"; path = "Target Support Files/Pods-HopSkipDriveProject/Pods-HopSkipDriveProject.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0B3000B426D8651C00ECBD3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECABCB0BE2C8BE131C2217FD /* Pods_HopSkipDriveProject.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B3000CA26D8651D00ECBD3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B3000D526D8651E00ECBD3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09F41568891A53441EFF8952 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54CED23A79A906453A563B6F /* Pods-HopSkipDriveProject.debug.xcconfig */,
+				BFFF07E3C2D6E6D7F19BE65B /* Pods-HopSkipDriveProject.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		0B3000AE26D8651C00ECBD3D = {
+			isa = PBXGroup;
+			children = (
+				0B3000B926D8651C00ECBD3D /* HopSkipDriveProject */,
+				0B3000D026D8651D00ECBD3D /* HopSkipDriveProjectTests */,
+				0B3000DB26D8651E00ECBD3D /* HopSkipDriveProjectUITests */,
+				0B3000B826D8651C00ECBD3D /* Products */,
+				09F41568891A53441EFF8952 /* Pods */,
+				58EC35168280BBB3C9914485 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0B3000B826D8651C00ECBD3D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0B3000B726D8651C00ECBD3D /* HopSkipDriveProject.app */,
+				0B3000CD26D8651D00ECBD3D /* HopSkipDriveProjectTests.xctest */,
+				0B3000D826D8651E00ECBD3D /* HopSkipDriveProjectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0B3000B926D8651C00ECBD3D /* HopSkipDriveProject */ = {
+			isa = PBXGroup;
+			children = (
+				0B3000FC26D876D500ECBD3D /* Controllers */,
+				0B3000F926D876A300ECBD3D /* Views */,
+				0B3000EC26D8689400ECBD3D /* Models */,
+				0B3000BA26D8651C00ECBD3D /* AppDelegate.swift */,
+				0B3000BC26D8651C00ECBD3D /* SceneDelegate.swift */,
+				0B3000C326D8651D00ECBD3D /* Assets.xcassets */,
+				0B3000C526D8651D00ECBD3D /* LaunchScreen.storyboard */,
+				0B3000C826D8651D00ECBD3D /* Info.plist */,
+				0B3000FF26D8935600ECBD3D /* Utils.swift */,
+			);
+			path = HopSkipDriveProject;
+			sourceTree = "<group>";
+		};
+		0B3000D026D8651D00ECBD3D /* HopSkipDriveProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				0B3000D126D8651D00ECBD3D /* HopSkipDriveProjectTests.swift */,
+				0B3000D326D8651D00ECBD3D /* Info.plist */,
+			);
+			path = HopSkipDriveProjectTests;
+			sourceTree = "<group>";
+		};
+		0B3000DB26D8651E00ECBD3D /* HopSkipDriveProjectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0B3000DC26D8651E00ECBD3D /* HopSkipDriveProjectUITests.swift */,
+				0B3000DE26D8651E00ECBD3D /* Info.plist */,
+			);
+			path = HopSkipDriveProjectUITests;
+			sourceTree = "<group>";
+		};
+		0B3000EC26D8689400ECBD3D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0B3000ED26D868A100ECBD3D /* NetworkCalls.swift */,
+				0B3000EF26D8690200ECBD3D /* Ride.swift */,
+				0B3000F126D86AFB00ECBD3D /* Waypoint.swift */,
+				0B3000F326D86B4900ECBD3D /* Passenger.swift */,
+				0B3000F526D86BA800ECBD3D /* Location.swift */,
+				0B30010126D9ED4700ECBD3D /* Section.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0B3000F926D876A300ECBD3D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0B3000FA26D876B800ECBD3D /* MyRidesView.swift */,
+				0B30010326DABAF000ECBD3D /* RidesSectionHeaderView.swift */,
+				0B30010526DAE08000ECBD3D /* RideTableViewCell.swift */,
+				0B30010D26DB37FE00ECBD3D /* RideDetailsView.swift */,
+				0B30010F26DB556D00ECBD3D /* WaypointTableViewCell.swift */,
+				0B30011126DB5C9B00ECBD3D /* RideDetailsFooterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0B3000FC26D876D500ECBD3D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0B3000EA26D8685C00ECBD3D /* MyRidesViewController.swift */,
+				0B30010926DB292700ECBD3D /* RideDetailsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		58EC35168280BBB3C9914485 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A431C00A84088918CE9D464 /* Pods_HopSkipDriveProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0B3000B626D8651C00ECBD3D /* HopSkipDriveProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B3000E126D8651E00ECBD3D /* Build configuration list for PBXNativeTarget "HopSkipDriveProject" */;
+			buildPhases = (
+				3DED5F034874F6FB7CF0A9EE /* [CP] Check Pods Manifest.lock */,
+				0B3000B326D8651C00ECBD3D /* Sources */,
+				0B3000B426D8651C00ECBD3D /* Frameworks */,
+				0B3000B526D8651C00ECBD3D /* Resources */,
+				777E6865DAA8008E1D5F9AE2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HopSkipDriveProject;
+			productName = HopSkipDriveProject;
+			productReference = 0B3000B726D8651C00ECBD3D /* HopSkipDriveProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0B3000CC26D8651D00ECBD3D /* HopSkipDriveProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B3000E426D8651E00ECBD3D /* Build configuration list for PBXNativeTarget "HopSkipDriveProjectTests" */;
+			buildPhases = (
+				0B3000C926D8651D00ECBD3D /* Sources */,
+				0B3000CA26D8651D00ECBD3D /* Frameworks */,
+				0B3000CB26D8651D00ECBD3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B3000CF26D8651D00ECBD3D /* PBXTargetDependency */,
+			);
+			name = HopSkipDriveProjectTests;
+			productName = HopSkipDriveProjectTests;
+			productReference = 0B3000CD26D8651D00ECBD3D /* HopSkipDriveProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0B3000D726D8651E00ECBD3D /* HopSkipDriveProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B3000E726D8651E00ECBD3D /* Build configuration list for PBXNativeTarget "HopSkipDriveProjectUITests" */;
+			buildPhases = (
+				0B3000D426D8651E00ECBD3D /* Sources */,
+				0B3000D526D8651E00ECBD3D /* Frameworks */,
+				0B3000D626D8651E00ECBD3D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B3000DA26D8651E00ECBD3D /* PBXTargetDependency */,
+			);
+			name = HopSkipDriveProjectUITests;
+			productName = HopSkipDriveProjectUITests;
+			productReference = 0B3000D826D8651E00ECBD3D /* HopSkipDriveProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0B3000AF26D8651C00ECBD3D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					0B3000B626D8651C00ECBD3D = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					0B3000CC26D8651D00ECBD3D = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 0B3000B626D8651C00ECBD3D;
+					};
+					0B3000D726D8651E00ECBD3D = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 0B3000B626D8651C00ECBD3D;
+					};
+				};
+			};
+			buildConfigurationList = 0B3000B226D8651C00ECBD3D /* Build configuration list for PBXProject "HopSkipDriveProject" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0B3000AE26D8651C00ECBD3D;
+			productRefGroup = 0B3000B826D8651C00ECBD3D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0B3000B626D8651C00ECBD3D /* HopSkipDriveProject */,
+				0B3000CC26D8651D00ECBD3D /* HopSkipDriveProjectTests */,
+				0B3000D726D8651E00ECBD3D /* HopSkipDriveProjectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0B3000B526D8651C00ECBD3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B3000C726D8651D00ECBD3D /* LaunchScreen.storyboard in Resources */,
+				0B3000C426D8651D00ECBD3D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B3000CB26D8651D00ECBD3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B3000D626D8651E00ECBD3D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3DED5F034874F6FB7CF0A9EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HopSkipDriveProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		777E6865DAA8008E1D5F9AE2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HopSkipDriveProject/Pods-HopSkipDriveProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HopSkipDriveProject/Pods-HopSkipDriveProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HopSkipDriveProject/Pods-HopSkipDriveProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0B3000B326D8651C00ECBD3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B3000FB26D876B800ECBD3D /* MyRidesView.swift in Sources */,
+				0B3000BB26D8651C00ECBD3D /* AppDelegate.swift in Sources */,
+				0B3000F426D86B4900ECBD3D /* Passenger.swift in Sources */,
+				0B3000F626D86BA800ECBD3D /* Location.swift in Sources */,
+				0B30011026DB556D00ECBD3D /* WaypointTableViewCell.swift in Sources */,
+				0B30010226D9ED4700ECBD3D /* Section.swift in Sources */,
+				0B30010A26DB292700ECBD3D /* RideDetailsViewController.swift in Sources */,
+				0B30010E26DB37FE00ECBD3D /* RideDetailsView.swift in Sources */,
+				0B3000EB26D8685C00ECBD3D /* MyRidesViewController.swift in Sources */,
+				0B30010026D8935600ECBD3D /* Utils.swift in Sources */,
+				0B3000F226D86AFB00ECBD3D /* Waypoint.swift in Sources */,
+				0B3000EE26D868A100ECBD3D /* NetworkCalls.swift in Sources */,
+				0B30011226DB5C9B00ECBD3D /* RideDetailsFooterView.swift in Sources */,
+				0B3000F026D8690200ECBD3D /* Ride.swift in Sources */,
+				0B3000BD26D8651C00ECBD3D /* SceneDelegate.swift in Sources */,
+				0B30010426DABAF000ECBD3D /* RidesSectionHeaderView.swift in Sources */,
+				0B30010626DAE08000ECBD3D /* RideTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B3000C926D8651D00ECBD3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B3000D226D8651D00ECBD3D /* HopSkipDriveProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B3000D426D8651E00ECBD3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B3000DD26D8651E00ECBD3D /* HopSkipDriveProjectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0B3000CF26D8651D00ECBD3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B3000B626D8651C00ECBD3D /* HopSkipDriveProject */;
+			targetProxy = 0B3000CE26D8651D00ECBD3D /* PBXContainerItemProxy */;
+		};
+		0B3000DA26D8651E00ECBD3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B3000B626D8651C00ECBD3D /* HopSkipDriveProject */;
+			targetProxy = 0B3000D926D8651E00ECBD3D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0B3000C526D8651D00ECBD3D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B3000C626D8651D00ECBD3D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0B3000DF26D8651E00ECBD3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0B3000E026D8651E00ECBD3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0B3000E226D8651E00ECBD3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54CED23A79A906453A563B6F /* Pods-HopSkipDriveProject.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4Q5XNTY23;
+				INFOPLIST_FILE = HopSkipDriveProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Angel.HopSkipDriveProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0B3000E326D8651E00ECBD3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFFF07E3C2D6E6D7F19BE65B /* Pods-HopSkipDriveProject.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4Q5XNTY23;
+				INFOPLIST_FILE = HopSkipDriveProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Angel.HopSkipDriveProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0B3000E526D8651E00ECBD3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4Q5XNTY23;
+				INFOPLIST_FILE = HopSkipDriveProjectTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Angel.HopSkipDriveProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HopSkipDriveProject.app/HopSkipDriveProject";
+			};
+			name = Debug;
+		};
+		0B3000E626D8651E00ECBD3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4Q5XNTY23;
+				INFOPLIST_FILE = HopSkipDriveProjectTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Angel.HopSkipDriveProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HopSkipDriveProject.app/HopSkipDriveProject";
+			};
+			name = Release;
+		};
+		0B3000E826D8651E00ECBD3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4Q5XNTY23;
+				INFOPLIST_FILE = HopSkipDriveProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Angel.HopSkipDriveProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HopSkipDriveProject;
+			};
+			name = Debug;
+		};
+		0B3000E926D8651E00ECBD3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S4Q5XNTY23;
+				INFOPLIST_FILE = HopSkipDriveProjectUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Angel.HopSkipDriveProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HopSkipDriveProject;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B3000B226D8651C00ECBD3D /* Build configuration list for PBXProject "HopSkipDriveProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B3000DF26D8651E00ECBD3D /* Debug */,
+				0B3000E026D8651E00ECBD3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B3000E126D8651E00ECBD3D /* Build configuration list for PBXNativeTarget "HopSkipDriveProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B3000E226D8651E00ECBD3D /* Debug */,
+				0B3000E326D8651E00ECBD3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B3000E426D8651E00ECBD3D /* Build configuration list for PBXNativeTarget "HopSkipDriveProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B3000E526D8651E00ECBD3D /* Debug */,
+				0B3000E626D8651E00ECBD3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B3000E726D8651E00ECBD3D /* Build configuration list for PBXNativeTarget "HopSkipDriveProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B3000E826D8651E00ECBD3D /* Debug */,
+				0B3000E926D8651E00ECBD3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0B3000AF26D8651C00ECBD3D /* Project object */;
+}
