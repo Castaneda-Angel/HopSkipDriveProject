@@ -45,8 +45,11 @@ class RidesSectionHeaderView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         
+        label.sizeToFit()
         label.textAlignment = .right
         label.textColor = getMainColor()
+        
+        label.layoutMargins = UIEdgeInsets(top: 0,left: 5,bottom: 0,right: 5)
         
         return label
     }()
@@ -76,14 +79,13 @@ class RidesSectionHeaderView: UIView {
         estimatedTextLabel.snp_makeConstraints({ (make) -> Void in
             make.right.equalToSuperview().offset(-10)
             make.top.equalToSuperview().offset(10)
+            make.height.equalTo(10)
         })
         
         estimatedAmountLabel.snp_makeConstraints({ (make) -> Void in
-            make.width.equalTo(100)
-
             make.right.equalToSuperview().offset(-10)
-            make.top.equalTo(estimatedTextLabel.snp_bottom)
-            make.bottom.equalToSuperview()
+            make.top.equalTo(estimatedTextLabel.snp_bottom).offset(3)
+            make.bottom.equalToSuperview().offset(-5)
         })
     }
     

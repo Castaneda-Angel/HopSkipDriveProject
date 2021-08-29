@@ -145,3 +145,10 @@ func constructWaypointsText(waypoints: [Waypoint]) -> String {
 func getMainColor() -> UIColor {
     return UIColor.init(red: 0.1, green: 0.26, blue: 0.43, alpha: 1.0)
 }
+
+/*
+ Returns a light blue accent color
+*/
+func getBlueAccent() -> UIColor {
+    return UIColor(red: 0.18, green: 0.72, blue: 0.9, alpha: 1.0)
+}

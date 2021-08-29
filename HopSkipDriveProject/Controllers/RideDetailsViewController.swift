@@ -65,11 +65,13 @@ class RideDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         rideDetailsView.informationHeaderView.timeRangeLabel.attributedText = timeRange
         
         
+        rideDetailsView.informationHeaderView.estimatedTextLabel.font = UIFont.systemFont(ofSize: 14)
         
         //gets dollar amount from cents
         let estimatedDollars = centsToDollars(cents: ride!.estimated_earnings_cents)
         
-        rideDetailsView.informationHeaderView.estimatedAmountLabel.text = formatDollars(dollars: estimatedDollars)
+        rideDetailsView.informationHeaderView.estimatedAmountLabel.text = "\(formatDollars(dollars: estimatedDollars))  "
+        addBorderAroundAmountLabel()
         
         //shows the series text if it's actually a series
         if(ride!.in_series == true){
@@ -88,6 +90,16 @@ class RideDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         
         rideDetailsView.startAndEndMapView.showAnnotations(rideDetailsView.startAndEndMapView.annotations, animated: false)
         
+    }
+    
+    func addBorderAroundAmountLabel() {
+        rideDetailsView.informationHeaderView.estimatedAmountLabel.textAlignment = .center
+        rideDetailsView.informationHeaderView.estimatedAmountLabel.font = UIFont.systemFont(ofSize: 18, weight: .heavy)
+        rideDetailsView.informationHeaderView.estimatedAmountLabel.layer.borderColor = getBlueAccent().cgColor
+        rideDetailsView.informationHeaderView.estimatedAmountLabel.layer.cornerRadius = 18
+        rideDetailsView.informationHeaderView.estimatedAmountLabel.backgroundColor = getBlueAccent()
+        rideDetailsView.informationHeaderView.estimatedAmountLabel.textColor = .white
+        rideDetailsView.informationHeaderView.estimatedAmountLabel.clipsToBounds = true
     }
     
 
