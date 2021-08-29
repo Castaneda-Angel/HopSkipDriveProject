@@ -17,6 +17,7 @@ class RideDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     //Views
     let rideDetailsView = RideDetailsView()
     let tableFooterView = RideDetailsFooterView()
+    let backButton = BackButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,11 @@ class RideDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         //View setup
         self.title = "Ride Details"
         self.view.backgroundColor = .white
+
+        //BackButton setup
+        backButton.addTarget(self, action: #selector(onBackButtonPress), for: .touchUpInside)
+        let barButton = UIBarButtonItem(customView: backButton)
+        self.navigationItem.leftBarButtonItem = barButton
         
         rideDetailsView.isSeries = ride!.in_series
         self.view.addSubview(rideDetailsView)
@@ -45,6 +51,10 @@ class RideDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         rideDetailsView.startAndEndMapView.register(MKAnnotationView.self, forAnnotationViewWithReuseIdentifier: "mapAnnotation")
         
         populateViews()
+    }
+    
+    @objc func onBackButtonPress() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     func populateViews() {

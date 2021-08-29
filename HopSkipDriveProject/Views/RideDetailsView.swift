@@ -74,7 +74,7 @@ class RideDetailsView: UIView {
                 make.top.equalTo(isSeriesLabel.snp.bottom).offset(5)
             }
             else{
-                make.top.equalTo(startAndEndMapView.snp.bottom).offset(5)
+                make.top.equalTo(startAndEndMapView.snp.bottom)
             }
             make.left.right.bottom.equalToSuperview()
         })
