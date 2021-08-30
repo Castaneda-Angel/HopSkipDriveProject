@@ -9,14 +9,13 @@ import UIKit
 import SnapKit
 import MapKit
 
-class RideDetailsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate {
+class RideDetailsViewController: UIViewController, MKMapViewDelegate {
 
     //Selected ride
     var ride: Ride?
     
     //Views
     let rideDetailsView = RideDetailsView()
-    let tableFooterView = RideDetailsFooterView()
     let backButton = BackButton()
     
     override func viewDidLoad() {
@@ -42,9 +41,9 @@ class RideDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         rideDetailsView.waypointsTableView.delegate = self
         rideDetailsView.waypointsTableView.dataSource  = self
         rideDetailsView.waypointsTableView.separatorColor = .gray
-        rideDetailsView.waypointsTableView.separatorStyle = .singleLine
+        rideDetailsView.waypointsTableView.separatorStyle = .none
         rideDetailsView.waypointsTableView.register(WaypointTableViewCell.self, forCellReuseIdentifier: "waypointCell")
-        rideDetailsView.waypointsTableView.tableFooterView = tableFooterView
+        rideDetailsView.waypointsTableView.register(WaypointTableViewFooterCell.self, forCellReuseIdentifier: "footerCell")
         
         //MapView setup
         rideDetailsView.startAndEndMapView.delegate = self
@@ -88,8 +87,6 @@ class RideDetailsViewController: UIViewController, UITableViewDataSource, UITabl
             rideDetailsView.isSeriesLabel.text = "This trip is part of a series."
         }
         
-        tableFooterView.miscRideInfoLabel.text = "Trip ID: \(ride!.trip_id) • \(ride!.estimated_ride_miles) mi • \(ride!.estimated_ride_minutes) min"
-        
         
         //sets map annotations for the start and end waypoints.
         rideDetailsView.startAnnotation.coordinate = CLLocationCoordinate2D(latitude: ride!.ordered_waypoints[0].location.lat, longitude: ride!.ordered_waypoints[0].location.lng)
@@ -110,32 +107,6 @@ class RideDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         rideDetailsView.informationHeaderView.estimatedAmountLabel.backgroundColor = getBlueAccent()
         rideDetailsView.informationHeaderView.estimatedAmountLabel.textColor = .white
         rideDetailsView.informationHeaderView.estimatedAmountLabel.clipsToBounds = true
-    }
-    
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ride!.ordered_waypoints.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "waypointCell", for: indexPath) as! WaypointTableViewCell
-        
-        //Shows different icons/text depending on if it's the anchor/dropoff waypoint
-        let isDropOff = indexPath.row+1 == ride!.ordered_waypoints.count
-        
-        let typeImage = UIImage(systemName: ride!.ordered_waypoints[indexPath.row].anchor == true ? "diamond.fill" : "circle.fill")
-        cell.typeImage.image = typeImage
-        cell.typeImage.tintColor = UIColor(red: 0.18, green: 0.72, blue: 0.9, alpha: 1.0)
-        
-        cell.typeLabel.text = !isDropOff ? "Pickup" : "Drop-off"
-        
-        cell.addressLabel.text = ride!.ordered_waypoints[indexPath.row].location.address
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
     }
     
     

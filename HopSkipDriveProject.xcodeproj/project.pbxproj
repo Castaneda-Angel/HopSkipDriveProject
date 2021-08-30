@@ -27,8 +27,10 @@
 		0B30010A26DB292700ECBD3D /* RideDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30010926DB292700ECBD3D /* RideDetailsViewController.swift */; };
 		0B30010E26DB37FE00ECBD3D /* RideDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30010D26DB37FE00ECBD3D /* RideDetailsView.swift */; };
 		0B30011026DB556D00ECBD3D /* WaypointTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30010F26DB556D00ECBD3D /* WaypointTableViewCell.swift */; };
-		0B30011226DB5C9B00ECBD3D /* RideDetailsFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30011126DB5C9B00ECBD3D /* RideDetailsFooterView.swift */; };
 		0B30011426DC4B3300ECBD3D /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B30011326DC4B3300ECBD3D /* BackButton.swift */; };
+		0B6BCB1526DD272F00C9D929 /* MyRidesExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6BCB1426DD272F00C9D929 /* MyRidesExtension.swift */; };
+		0B6BCB1726DD27CD00C9D929 /* RideDetailsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6BCB1626DD27CD00C9D929 /* RideDetailsExtension.swift */; };
+		0B6BCB1926DD30F600C9D929 /* WaypointTableViewFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6BCB1826DD30F600C9D929 /* WaypointTableViewFooterCell.swift */; };
 		ECABCB0BE2C8BE131C2217FD /* Pods_HopSkipDriveProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A431C00A84088918CE9D464 /* Pods_HopSkipDriveProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,8 +78,10 @@
 		0B30010926DB292700ECBD3D /* RideDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailsViewController.swift; sourceTree = "<group>"; };
 		0B30010D26DB37FE00ECBD3D /* RideDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailsView.swift; sourceTree = "<group>"; };
 		0B30010F26DB556D00ECBD3D /* WaypointTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointTableViewCell.swift; sourceTree = "<group>"; };
-		0B30011126DB5C9B00ECBD3D /* RideDetailsFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailsFooterView.swift; sourceTree = "<group>"; };
 		0B30011326DC4B3300ECBD3D /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		0B6BCB1426DD272F00C9D929 /* MyRidesExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRidesExtension.swift; sourceTree = "<group>"; };
+		0B6BCB1626DD27CD00C9D929 /* RideDetailsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideDetailsExtension.swift; sourceTree = "<group>"; };
+		0B6BCB1826DD30F600C9D929 /* WaypointTableViewFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaypointTableViewFooterCell.swift; sourceTree = "<group>"; };
 		54CED23A79A906453A563B6F /* Pods-HopSkipDriveProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HopSkipDriveProject.debug.xcconfig"; path = "Target Support Files/Pods-HopSkipDriveProject/Pods-HopSkipDriveProject.debug.xcconfig"; sourceTree = "<group>"; };
 		6A431C00A84088918CE9D464 /* Pods_HopSkipDriveProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HopSkipDriveProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFF07E3C2D6E6D7F19BE65B /* Pods-HopSkipDriveProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HopSkipDriveProject.release.xcconfig"; path = "Target Support Files/Pods-HopSkipDriveProject/Pods-HopSkipDriveProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -195,8 +199,8 @@
 				0B30010526DAE08000ECBD3D /* RideTableViewCell.swift */,
 				0B30010D26DB37FE00ECBD3D /* RideDetailsView.swift */,
 				0B30010F26DB556D00ECBD3D /* WaypointTableViewCell.swift */,
-				0B30011126DB5C9B00ECBD3D /* RideDetailsFooterView.swift */,
 				0B30011326DC4B3300ECBD3D /* BackButton.swift */,
+				0B6BCB1826DD30F600C9D929 /* WaypointTableViewFooterCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,10 +208,20 @@
 		0B3000FC26D876D500ECBD3D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0B6BCB1326DD270000C9D929 /* TableViewExtensions */,
 				0B3000EA26D8685C00ECBD3D /* MyRidesViewController.swift */,
 				0B30010926DB292700ECBD3D /* RideDetailsViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0B6BCB1326DD270000C9D929 /* TableViewExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				0B6BCB1426DD272F00C9D929 /* MyRidesExtension.swift */,
+				0B6BCB1626DD27CD00C9D929 /* RideDetailsExtension.swift */,
+			);
+			path = TableViewExtensions;
 			sourceTree = "<group>";
 		};
 		58EC35168280BBB3C9914485 /* Frameworks */ = {
@@ -397,15 +411,17 @@
 				0B3000F626D86BA800ECBD3D /* Location.swift in Sources */,
 				0B30011026DB556D00ECBD3D /* WaypointTableViewCell.swift in Sources */,
 				0B30010226D9ED4700ECBD3D /* Section.swift in Sources */,
+				0B6BCB1526DD272F00C9D929 /* MyRidesExtension.swift in Sources */,
 				0B30010A26DB292700ECBD3D /* RideDetailsViewController.swift in Sources */,
+				0B6BCB1926DD30F600C9D929 /* WaypointTableViewFooterCell.swift in Sources */,
 				0B30010E26DB37FE00ECBD3D /* RideDetailsView.swift in Sources */,
 				0B3000EB26D8685C00ECBD3D /* MyRidesViewController.swift in Sources */,
 				0B30010026D8935600ECBD3D /* Utils.swift in Sources */,
 				0B3000F226D86AFB00ECBD3D /* Waypoint.swift in Sources */,
 				0B3000EE26D868A100ECBD3D /* NetworkCalls.swift in Sources */,
-				0B30011226DB5C9B00ECBD3D /* RideDetailsFooterView.swift in Sources */,
 				0B3000F026D8690200ECBD3D /* Ride.swift in Sources */,
 				0B30011426DC4B3300ECBD3D /* BackButton.swift in Sources */,
+				0B6BCB1726DD27CD00C9D929 /* RideDetailsExtension.swift in Sources */,
 				0B3000BD26D8651C00ECBD3D /* SceneDelegate.swift in Sources */,
 				0B30010426DABAF000ECBD3D /* RidesSectionHeaderView.swift in Sources */,
 				0B30010626DAE08000ECBD3D /* RideTableViewCell.swift in Sources */,

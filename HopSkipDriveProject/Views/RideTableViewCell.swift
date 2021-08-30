@@ -24,9 +24,9 @@ class RideTableViewCell: UITableViewCell {
     lazy var riderAndBoosterSeatCountLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        
-        label.font = UIFont.systemFont(ofSize: 13)
-        
+        label.textAlignment = .left
+        label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        label.adjustsFontSizeToFitWidth = true
         return label
     }()
     
@@ -59,7 +59,7 @@ class RideTableViewCell: UITableViewCell {
         })
         
         riderAndBoosterSeatCountLabel.snp_makeConstraints({ (make) -> Void in
-            make.left.equalTo(timeRangeLabel.snp_right).offset(5)
+            make.left.equalTo(timeRangeLabel.snp_right).offset(2)
             make.top.equalToSuperview().offset(20)
             make.centerY.equalTo(timeRangeLabel.snp_centerY)
         })
