@@ -25,4 +25,4 @@ Improvements I Would Make:
 
 6. Support dark mode. I noticed that when the user is in dark mode for their device, it changes some colors but not others and it's not a good experience. I ended up changing it so that the appearance is forced to the "Light" appearance, but giving dark mode full support would be great.
 
-7. Use scalable font sizes. On smaller screen sizes, the font stays the same which makes the app look a little off (big text, small device). It looks great on regular/large screen sizes but the overall goal is to make it look great on all sizes. Adjusting the font size with the width of the screen would fix this issue and make the overall app experience fantastic!
+7. Use scalable font sizes. On smaller screen sizes, the font stays the same which makes the app look a little off (big text, small device). It looks great on regular/large screen sizes but the goal is to make it look great on all sizes. Adjusting the font size with the width of the screen would fix this issue and make the overall app experience fantastic!
