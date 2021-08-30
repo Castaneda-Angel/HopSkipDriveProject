@@ -24,14 +24,14 @@ class WaypointTableViewCell: UITableViewCell {
     lazy var typeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        
+        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         return label
     }()
     
     lazy var addressLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .gray
+        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         return label
     }()
     

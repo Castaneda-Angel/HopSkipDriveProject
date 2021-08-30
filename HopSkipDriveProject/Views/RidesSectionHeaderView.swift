@@ -63,13 +63,11 @@ class RidesSectionHeaderView: UIView {
     
     func addConstraints() {
         dateLabel.snp_makeConstraints({ (make) -> Void in
-            make.height.equalTo(50)
             
             make.top.bottom.equalToSuperview()
             make.left.equalToSuperview().offset(10)
         })
         timeRangeLabel.snp_makeConstraints({ (make) -> Void in
-            make.height.equalTo(50)
             make.width.equalTo(175)
 
             make.left.equalTo(dateLabel.snp_right)
@@ -79,12 +77,12 @@ class RidesSectionHeaderView: UIView {
         estimatedTextLabel.snp_makeConstraints({ (make) -> Void in
             make.right.equalToSuperview().offset(-10)
             make.top.equalToSuperview().offset(10)
-            make.height.equalTo(10)
+            make.height.lessThanOrEqualTo(10)
         })
         
         estimatedAmountLabel.snp_makeConstraints({ (make) -> Void in
             make.right.equalToSuperview().offset(-10)
-            make.top.equalTo(estimatedTextLabel.snp_bottom).offset(3)
+            make.top.lessThanOrEqualTo(estimatedTextLabel.snp_bottom).offset(3)
             make.bottom.equalToSuperview().offset(-5)
         })
     }

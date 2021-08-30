@@ -155,7 +155,7 @@ class MyRidesViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         //Set attributes to the different parts of the full earnings text
         let smallerText = "est."
-        let smallerTextAttrs = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15), NSAttributedString.Key.foregroundColor : getMainColor()]
+        let smallerTextAttrs = [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 13), NSAttributedString.Key.foregroundColor : getMainColor()]
         let fullEarningsText = NSMutableAttributedString(string: smallerText, attributes: smallerTextAttrs)
         
         let dollarsText = " \(estimatedDollars)"

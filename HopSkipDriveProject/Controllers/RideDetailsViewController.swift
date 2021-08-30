@@ -106,7 +106,7 @@ class RideDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         rideDetailsView.informationHeaderView.estimatedAmountLabel.textAlignment = .center
         rideDetailsView.informationHeaderView.estimatedAmountLabel.font = UIFont.systemFont(ofSize: 18, weight: .heavy)
         rideDetailsView.informationHeaderView.estimatedAmountLabel.layer.borderColor = getBlueAccent().cgColor
-        rideDetailsView.informationHeaderView.estimatedAmountLabel.layer.cornerRadius = 18
+        rideDetailsView.informationHeaderView.estimatedAmountLabel.layer.cornerRadius = 15
         rideDetailsView.informationHeaderView.estimatedAmountLabel.backgroundColor = getBlueAccent()
         rideDetailsView.informationHeaderView.estimatedAmountLabel.textColor = .white
         rideDetailsView.informationHeaderView.estimatedAmountLabel.clipsToBounds = true
