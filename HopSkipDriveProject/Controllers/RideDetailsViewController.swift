@@ -120,10 +120,10 @@ class RideDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "waypointCell", for: indexPath) as! WaypointTableViewCell
         
-        //Shows different icons and text depending on if it's the dropoff waypoint
+        //Shows different icons/text depending on if it's the anchor/dropoff waypoint
         let isDropOff = indexPath.row+1 == ride!.ordered_waypoints.count
         
-        let typeImage = UIImage(systemName: !isDropOff ? "diamond.fill" : "circle.fill")
+        let typeImage = UIImage(systemName: ride!.ordered_waypoints[indexPath.row].anchor == true ? "diamond.fill" : "circle.fill")
         cell.typeImage.image = typeImage
         cell.typeImage.tintColor = UIColor(red: 0.18, green: 0.72, blue: 0.9, alpha: 1.0)
         
