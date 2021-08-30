@@ -21,4 +21,8 @@ Improvements I Would Make:
 
 4. Use more labels instead of attributed strings. I don't know if this would be a big improvement, but it would definitely make the code cleaner. I used attributed strings for styling a part of a string, but that added about 6 lines of code at times to style 2 parts of a string. Using a different label for each part of the string would allow the styling to be set within its own label.
 
-5. Changing the font of the app. I couldn't quite get the font the same as the pictures so I just used the system font. It's a small improvement but it would make my version of the app look cleaner overall!
+5. Change the font of the app. I couldn't quite get the font the same as the pictures so I just used the system font. It's a small improvement but it would make my version of the app look cleaner overall!
+
+6. Support dark mode. I noticed that when the user is in dark mode for their device, it changes some colors but not others and it's not a good experience. I ended up changing it so that the appearance is forced to the "Light" appearance, but giving dark mode full support would be great.
+
+7. Use scalable font sizes. On smaller screen sizes, the font stays the same which makes the app look a little off (big text, small device). It looks great on regular/large screen sizes but the overall goal is to make it look great on all sizes. Adjusting the font size with the width of the screen would fix this issue and make the overall app experience fantastic!
